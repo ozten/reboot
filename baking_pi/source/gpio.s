@@ -1,3 +1,13 @@
+/*
+ * Raspberry Pi GPIO Controller Addresses
+ * 0x20200000 -- Base Addresses
+ * 0 -  24 -- Function Set
+ * 28 - 36 --  Turn On Pin
+ * 40 - 48 --  Turn Off Pin
+ * 52 - 60 --  Pin Input
+ */
+
+
 /* return the address of the GPIO pin */
 .globl GetGpioAddress
 GetGpioAddress:
