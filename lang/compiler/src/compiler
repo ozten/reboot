@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+var parseFile = require('./lib/parser.js').parseFile;
+
+if (process.argv.length <= 2) {
+	usage();
+	process.exit(1);
+}
+
+parseFile(process.argv[2], function(err, ast) {
+	if (err) {
+		console.log(err);
+		process.exit(2);	
+	}
+	console.log('===========  AST  ==========');	
+	console.log(JSON.stringify(ast, null, 4));
+});
+
+function usage() {
+	console.log("Usage: compiler path/to/program.src");
+}

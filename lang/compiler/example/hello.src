@@ -1,0 +1,5 @@
+use core.stdout
+
+fn main(args) {
+	stdout('Hello, World!')
+}  
